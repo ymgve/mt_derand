@@ -4,6 +4,7 @@
 int
 SimpleServer::setup( unsigned short int port, std::string ipaddr)
 {
+  idle = true;
 
   if ((lsock = socket(AF_INET, SOCK_STREAM, 0)) < 0)
     return -1;
